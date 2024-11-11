@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡牌翻面效果</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center-screen" id="themeContainer">
+        <label for="themeSelect">選擇主題：</label>
+        <select id="themeSelect">
+            <option value="pokemon">寶可夢</option>
+            <option value="sanrio">三麗鷗</option>
+            <option value="genshin">原神</option> <!-- 新增原神主題 -->
+        </select>
+        
+        <label for="countdownSelect">選擇倒數秒數：</label>
+        <select id="countdownSelect">
+            <option value="3">3秒</option>
+            <option value="5">5秒</option>
+            <option value="8">8秒</option>
+        </select>
+        
+        <label for="gridSizeSelect">選擇網格大小：</label>
+        <select id="gridSizeSelect">
+            <option value="2">2x2</option>
+            <option value="4" selected>4x4</option>
+            <option value="6">6x6</option>
+        </select>
+        
+        <button id="startGame">開始遊戲</button>
+
+        <!-- 將倒數計時顯示移到這裡 -->
+        <div id="countdown" class="countdown"></div> <!-- 倒數計時顯示在選擇主題下方 -->
+    </div>
+
+    <div id="card-container" class="card-container"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

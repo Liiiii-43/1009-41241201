@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/background.jpg'); /* 設定背景圖片 */
+    background-size: cover; /* 背景圖片覆蓋整個畫面 */
+    background-position: center; /* 背景圖片居中顯示 */
+    margin: 0;
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%; /* 初始顯示在畫面中間 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease; /* 增加過渡效果 */
+}
+
+.top-center {
+    text-align: center; /* 文字置中 */
+}
+
+.countdown {
+    display: none; /* 初始隱藏倒數元素 */
+    font-size: 24px; /* 調整字體大小 */
+    margin-left: 20px; /* 調整倒數與按鈕之間的間距 */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 根據選擇的網格大小生成 */
+    grid-gap: 10px; /* 卡片之間的間距 */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 60px; /* 將卡片寬度設置為60px */
+    height: 100px; /* 將卡片高度設置為100px */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: white;
+}
+
+#countdown {
+    position: absolute;
+    bottom: 20px; /* 調整到適當的底部距離 */
+    left: 50%;
+    color: white;
+    font-size: 20px; /* 字體大小 */
+    transform: translateX(-50%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* 新增的樣式 */
+label {
+    margin-right: 5px; /* 調整標籤與下拉選單的間距 */
+}
+
+select {
+    margin-right: 8px; /* 調整下拉選單之間的間距 */
+}
+
+button {
+    margin-left: 8px; /* 調整按鈕與下拉選單的間距 */
+}
